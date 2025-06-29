@@ -61,7 +61,7 @@ func TestGetAPIKey(t *testing.T) {
 				if err != nil {
 					t.Fatalf("did not expect error but got: %v", err)
 				}
-				if key == tt.expectedKey {
+				if key != tt.expectedKey {
 					t.Errorf("expected key %q, got %q", tt.expectedKey, key)
 				}
 			}
